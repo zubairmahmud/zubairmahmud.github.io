@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   Zubayer Mahmud - Portfolio
+  </title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&amp;family=Outfit:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com">
+</script>
+<!-- Tailwind Config -->
+<script>
+   tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Figtree', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            primary: '#6366F1',
+            secondary: '#EC4899',
+            background: '#F9FAFB',
+            dark: '#111827',
+            light: '#F3F4F6',
+          },
+        }
+      }
+    }
+  </script>
+<!-- AOS for scroll animations -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<!-- Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+<!-- Background Animation -->
+<style>body {
+background: radial-gradient(circle at top left, #f0f4ff, #fef6fb);
+}
+#whatsappBtn {
+position: fixed;
+bottom: 2rem;
+right: 1.5rem;
+width: 3.5rem;
+height: 3.5rem;
+background-color: #25D366;
+color: white;
+border-radius: 9999px;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+z-index: 999;
+transition: transform 0.3s;
+}
+#whatsappBtn:hover {
+transform: scale(1.1);
+}
+@keyframes color-change {
+0% { color: #fff; }
+25% { color: #a78bfa; }
+50% { color: #ec4899; }
+75% { color: #38bdf8; }
+100% { color: #fff; }
+}
+.animate-color-change {
+animation: color-change 6s infinite;
+}
+@keyframes modern-color {
+0% { color: #f472b6; }
+25% { color: #a78bfa; }
+50% { color: #60a5fa; }
+75% { color: #facc15; }
+100% { color: #f472b6; }
+}
+.animate-modern-color {
+animation: modern-color 6s infinite;
+}
+@keyframes gradientFlow {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+.animate-gradient {
+background-size: 200% 200%;
+animation: gradientFlow 5s ease infinite;
+}
+@keyframes hueRotate {
+0% { filter: hue-rotate(0deg); }
+100% { filter: hue-rotate(360deg); }
+}
+.animate-hue-rotate {
+animation: hueRotate 6s linear infinite;
+}
+@keyframes profilePulse {
+0%, 100% {
+transform: scale(1);
+filter: drop-shadow(0 0 5px #60a5fa);
+}
+50% {
+transform: scale(1.04);
+filter: drop-shadow(0 0 15px #3b82f6);
+}
+}
+.animate-profile-pulse {
+animation: profilePulse 4s infinite ease-in-out;
+transition: transform 0.3s ease-in-out;
+border-radius: 9999px;
+}</style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<meta content="Zubayer Mahmud | Software Engineer Portfolio with React, Node.js, and modern web technologies." name="description"/>
+<meta content="Zubayer, Software Engineer, Web Developer, React, Node.js, Portfolio" name="keywords"/>
+<meta content="Zubayer Mahmud" name="author"/>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
+</script>
+<meta content="index, follow" name="robots"/><meta content="Zubayer Mahmud - Software Engineer Portfolio" property="og:title"/><meta content="Showcasing projects, skills and blogs by Zubayer Mahmud." property="og:description"/><meta content="https://i.postimg.cc/BQRYnbmC/Picsart-25-01-30-18-52-00-003.jpg" property="og:image"/><meta content="https://zubairmahmud.dev" property="og:url"/><meta content="website" property="og:type"/><meta content="summary_large_image" name="twitter:card"/><meta content="Zubayer Mahmud - Portfolio" name="twitter:title"/><meta content="Portfolio showcasing Zubayer Mahmud's skills and projects." name="twitter:description"/><meta content="https://i.postimg.cc/BQRYnbmC/Picsart-25-01-30-18-52-00-003.jpg" name="twitter:image"/></head>
+<body class="font-sans text-gray-800">
+<div class="h-24">
+</div>
+<div class="h-20">
+</div>
+<!-- WHATSAPP BUTTON -->
+<!-- CONTENT WILL GO HERE -->
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+</script>
+<script>
+   AOS.init({ duration: 1000, once: true });
+  </script>
+<script>
+   document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  this.reset();
+  alert("✅ Thank you! Your message has been sent.");
+});
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12">
+</script>
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+  new Typed(".typed-role", {
+    strings: ["Software Engineer", "Web Developer", "Content Creator"],
+    typeSpeed: 80,
+    backSpeed: 40,
+    backDelay: 2000,
+    loop: true
+  });
+});
+  </script>
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+  const nameElement = document.querySelector(".typed-name");
+  const lottieContainer = document.getElementById("lottie-header");
+  let isName = true;
+
+  function showName() {
+    nameElement.innerHTML = "";
+    new Typed(".typed-name", {
+      strings: ["Zubayer Mahmud"],
+      typeSpeed: 80,
+      backSpeed: 40,
+      showCursor: false,
+      onComplete: () => {
+        setTimeout(() => {
+          nameElement.innerHTML = "";
+          lottieContainer.style.display = "block";
+          setTimeout(() => {
+            lottieContainer.style.display = "none";
+            showName();
+          }, 2000);
+        }, 1500);
+      }
+    });
+  }
+
+  lottieContainer.style.display = "none";
+  showName();
+});
+  </script>
+<button class="fixed bottom-5 right-5 p-2 md:p-3 rounded-full bg-gradient-to-br from-purple-800 to-indigo-900 text-white text-lg shadow-lg hover:scale-110 hover:rotate-6 transition-all duration-300 z-50 hidden" id="scrollToTop">
+<i class="bi bi-chevron-double-up">
+</i>
+</button>
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 py-3 shadow-sm flex justify-center items-center transition-all duration-500 ease-in-out">
+<h1 class="text-2xl md:text-4xl font-black tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 via-cyan-400 to-indigo-600 animate-hue-rotate font-sans">
+    Zubayer Mahmud
+   </h1>
+</header>
+<!-- Hero Section -->
+<section class="flex flex-col-reverse md:flex-row items-center gap-10 px-6 md:px-16 pt-12 pb-20" data-aos="fade-up">
+<div class="flex-1 space-y-4 text-center md:text-left">
+<h2 class="leading-tight transition-all duration-1000 font-display text-gray-900 font-bold text-4xl ease-in-out hover:scale-105 md:text-5xl h-[4.5rem]">
+     I'm a
+     <span class="text-primary animate-gradient-x bg-gradient-to-r from-indigo-500 via-pink-500 to-indigo-500 bg-clip-text text-transparent typed-role">
+</span>
+</h2>
+<p class="text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
+     Passionate about building modern web experiences with clean, efficient code and creative design.
+    </p>
+</div>
+<div class="flex-1 flex justify-center r e l a t i v e r e l a t i v e r e l a t i v e r e l a t i v e r e l a t i v e r e l a t i v e r e l a t i v e r e l a t i v e r e l a t i v e p t - 6">
+<img alt="Zubayer Mahmud" class="duration-500 md:h-56 hover:shadow-xl hover:scale-105 ring-primary hover:ring-8 w-48 rounded-full duration-700 ring-4 transition-all ease-in-out shadow-lg transition-transform object-cover hover:rotate-1 h-48 md:w-56 hover:ring-secondary animate-profile-pulse" loading="lazy" src="https://i.postimg.cc/BQRYnbmC/Picsart-25-01-30-18-52-00-003.jpg"/>
+</div>
+</section>
+<!-- About Section -->
+<section class="px-6 md:px-16 py-10 bg-light" data-aos="fade-up">
+<div class="flex justify-center mb-8">
+<lottie-player autoplay="" background="transparent" loop="" speed="1" src="https://assets10.lottiefiles.com/packages/lf20_qp1q7mct.json" style="width: 200px; height: 200px;">
+</lottie-player>
+</div>
+<h3 class="text-2xl font-bold font-display text-primary mb-4">
+    About Me
+   </h3>
+<div class="text-gray-700 max-w-3xl leading-relaxed space-y-4">
+<p>
+     I’m Zubayer Mahmud — a software developer, content creator, and entrepreneur from Bangladesh. With a deep love for technology and learning, I specialize in crafting engaging digital products.
+    </p>
+<p>
+     Experienced in frontend &amp; backend development, React, Node.js, and video editing. I believe in continuous improvement and innovation through code.
+    </p>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="px-6 md:px-16 py-12" data-aos="fade-up">
+<h3 class="text-2xl font-bold font-display text-primary mb-6">
+    Skills
+   </h3>
+<div class="grid grid-cols-3 md:grid-cols-6 gap-6 text-center text-sm text-gray-600">
+<!-- Skill Item -->
+<div class="flex flex-col items-center hover:scale-110 transition group relative">
+<img alt="React" class="w-10 h-10 mb-2" loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/>
+<span>
+      React
+     </span>
+<span class="absolute bottom-12 px-2 py-1 text-xs rounded bg-gray-800 text-white opacity-0 group-hover:opacity-100 transition">
+      Frontend library
+     </span>
+</div>
+<div class="flex flex-col items-center hover:scale-110 transition">
+<img alt="JavaScript" class="w-10 h-10 mb-2" loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/>
+<span>
+      JavaScript
+     </span>
+</div>
+<div class="flex flex-col items-center hover:scale-110 transition">
+<img alt="Tailwind CSS" class="w-10 h-10 mb-2" loading="lazy" src="https://www.svgrepo.com/show/374118/tailwind.svg"/>
+<span>
+      Tailwind CSS
+     </span>
+</div>
+<div class="flex flex-col items-center hover:scale-110 transition">
+<img alt="Node.js" class="w-10 h-10 mb-2" loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/>
+<span>
+      Node.js
+     </span>
+</div>
+<div class="flex flex-col items-center hover:scale-110 transition">
+<img alt="Git" class="w-10 h-10 mb-2" loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>
+<span>
+      Git
+     </span>
+</div>
+<div class="flex flex-col items-center hover:scale-110 transition">
+<img alt="Docker" class="w-10 h-10 mb-2" loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg"/>
+<span>
+      Docker
+     </span>
+</div>
+</div>
+<div class="my-10 flex justify-center">
+</div>
+</section>
+<!-- Projects Section -->
+<section class="px-6 md:px-16 py-12 bg-light" data-aos="fade-up">
+<h3 class="text-2xl font-bold font-display text-primary mb-6">
+    Projects
+   </h3>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="bg-white border shadow-sm rounded-lg p-5 hover:shadow-lg transform hover:-translate-y-2 hover:scale-105 transition-all duration-300">
+<h4 class="text-lg font-semibold mb-2">
+      React Website
+     </h4>
+<p class="text-gray-600 text-sm">
+      A responsive portfolio built using React and Tailwind CSS.
+     </p>
+<a class="text-primary hover:underline text-sm block mt-2" href="https://github.com/zubairmahmud/react-portfolio" target="_blank">
+      View Project →
+     </a>
+<a class="text-primary hover:underline text-sm block mt-2" href="https://github.com/zubairmahmud/react-portfolio" target="_blank">
+      View Project →
+     </a>
+</div>
+<div class="bg-white border shadow-sm rounded-lg p-5 hover:shadow-lg transform hover:-translate-y-2 hover:scale-105 transition-all duration-300">
+<h4 class="text-lg font-semibold mb-2">
+      Mobile App
+     </h4>
+<p class="text-gray-600 text-sm">
+      A cross-platform mobile app built with Flutter.
+     </p>
+<a class="text-primary hover:underline text-sm block mt-2" href="https://github.com/zubairmahmud/flutter-app" target="_blank">
+      View Project →
+     </a>
+</div>
+<div class="bg-white border shadow-sm rounded-lg p-5 hover:shadow-lg transform hover:-translate-y-2 hover:scale-105 transition-all duration-300">
+<h4 class="text-lg font-semibold mb-2">
+      Data Dashboard
+     </h4>
+<p class="text-gray-600 text-sm">
+      Interactive data visualization built using Python &amp; Chart.js.
+     </p>
+<a class="text-primary hover:underline text-sm block mt-2" href="https://github.com/zubairmahmud/data-dashboard" target="_blank">
+      View Project →
+     </a>
+</div>
+</div>
+</section>
+<section class="px-6 md:px-16 py-12 bg-light" data-aos="fade-up" id="blog">
+<h3 class="text-2xl font-bold font-display text-primary mb-6">
+    Latest Articles
+   </h3>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="bg-white p-5 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
+<a class="text-lg font-semibold text-primary hover:underline" href="https://dev.to/zubairmahmud" target="_blank">
+      Understanding React Hooks
+     </a>
+<p class="text-sm text-gray-600 mt-2">
+      A complete guide to mastering React Hooks for better component logic.
+     </p>
+</div>
+<div class="bg-white p-5 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105">
+<a class="text-lg font-semibold text-primary hover:underline" href="https://hashnode.com/@ZubairMahmud" target="_blank">
+      Why Tailwind is better than Bootstrap
+     </a>
+<p class="text-sm text-gray-600 mt-2">
+      My personal insights and comparisons from using both for projects.
+     </p>
+</div>
+</div>
+</section>
+<section class="px-6 md:px-16 py-12" data-aos="fade-up">
+<h3 class="text-2xl font-bold font-display text-primary mb-6">
+    Professional Profiles
+   </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700 text-lg">
+<div>
+<i class="bi bi-linkedin text-blue-600 mr-2">
+</i>
+<a class="hover:underline text-primary" href="https://www.linkedin.com/in/zubairmahmud" target="_blank">
+      LinkedIn
+     </a>
+</div>
+<div>
+<i class="bi bi-github text-black mr-2">
+</i>
+<a class="hover:underline text-primary" href="https://github.com/zubairmahmud" target="_blank">
+      GitHub
+     </a>
+</div>
+<div>
+<i class="bi bi-journal-text text-purple-600 mr-2">
+</i>
+<a class="hover:underline text-primary" href="https://dev.to/zubairmahmud" target="_blank">
+      Dev.to
+     </a>
+</div>
+<div>
+<i class="bi bi-globe text-indigo-500 mr-2">
+</i>
+<a class="hover:underline text-primary" href="https://hashnode.com/@ZubairMahmud" target="_blank">
+      Hashnode
+     </a>
+</div>
+<div>
+<i class="bi bi-behance text-blue-700 mr-2">
+</i>
+<a class="hover:underline text-primary" href="https://www.behance.net/Zubair_Mahmud" target="_blank">
+      Behance
+     </a>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<!-- Footer -->
+<section class="px-6 md:px-16 py-12" data-aos="fade-up">
+<h3 class="text-2xl font-bold font-display text-primary mb-6">
+    Contact
+   </h3>
+<form action="https://formspree.io/f/xqkrvazl" class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl" id="contactForm" method="POST">
+<label class="sr-only" for="name">
+     Your Name
+    </label>
+<input class="px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-primary focus:border-primary" id="name" name="name" placeholder="Your Name" required="" type="text"/>
+<label class="sr-only" for="email">
+     Your Email
+    </label>
+<input class="px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-primary focus:border-primary" id="email" name="email" placeholder="Your Email" required="" type="email"/>
+<label class="sr-only" for="message">
+     Your Message
+    </label>
+<textarea class="md:col-span-2 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-primary focus:border-primary" id="message" name="message" placeholder="Your Message" required="" rows="4"></textarea>
+<button class="md:col-span-2 w-full bg-primary text-white font-semibold py-2 rounded-md hover:bg-indigo-700 transition" type="submit">
+     Send Message
+    </button>
+</form>
+<!-- Redesigned Contact Buttons -->
+<div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 text-white text-sm font-semibold">
+<a aria-label="Fill" class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 px-3 py-2 rounded-md transition-all transform hover:scale-105 flex items-center justify-center gap-1 shadow-md" href="mailto:me.zubairmahmud@gmail.com">
+<i class="bi bi-envelope-fill">
+</i>
+     Email
+    </a>
+<a aria-label="Whatsapp" class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 px-3 py-2 rounded-md transition-all transform hover:scale-105 flex items-center justify-center gap-1 shadow-md" href="https://wa.me/8801888655432?text=Hi%20Zubair!" target="_blank">
+<i class="bi bi-whatsapp">
+</i>
+     WhatsApp
+    </a>
+<a aria-label="Telegram" class="bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 px-3 py-2 rounded-md transition-all transform hover:scale-105 flex items-center justify-center gap-1 shadow-md" href="https://t.me/Zubair_Mahmud" target="_blank">
+<i class="bi bi-telegram">
+</i>
+     Telegram
+    </a>
+<a aria-label="Discord" class="bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 px-3 py-2 rounded-md transition-all transform hover:scale-105 flex items-center justify-center gap-1 shadow-md" href="https://discord.com/users/1224682434583597096" target="_blank">
+<i class="bi bi-discord">
+</i>
+     Discord
+    </a>
+</div>
+</section>
+<section class="px-6 md:px-16 pt-6" data-aos="fade-up">
+<h3 class="text-2xl font-bold font-display text-primary mb-4 text-center">
+    Follow Me
+   </h3>
+<div class="flex flex-wrap justify-center gap-6 text-2xl text-gray-600">
+<a aria-label="Facebook" class="hover:text-blue-600 transition" href="https://facebook.com/XubairMahmud" target="_blank">
+<i class="bi bi-facebook">
+</i>
+</a>
+<a aria-label="Instagram" class="hover:text-pink-500 transition" href="https://www.instagram.com/me.zubairmahmud" target="_blank">
+<i class="bi bi-instagram">
+</i>
+</a>
+<a aria-label="X" class="hover:text-black transition" href="https://x.com/me_ZubairMahmud" target="_blank">
+<i class="fab fa-x-twitter">
+</i>
+</a>
+<a aria-label="Threads" class="hover:text-purple-500 transition" href="https://www.threads.net/@me.zubairmahmud" target="_blank">
+<i class="fab fa-threads">
+</i>
+</a>
+<a aria-label="Pinterest" class="hover:text-red-600 transition" href="https://www.pinterest.com/Zubair_Mahmud" target="_blank">
+<i class="bi bi-pinterest">
+</i>
+</a>
+<a aria-label="YouTube" class="hover:text-red-500 transition" href="https://youtube.com/@me.zubairmahmud" target="_blank">
+<i class="bi bi-youtube">
+</i>
+</a>
+</div>
+</section>
+<footer class="bg-white py-6 text-center text-sm text-gray-600 border-t mt-10">
+   © 2025 Zubayer Mahmud. All rights reserved.
+  </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollBtn = document.getElementById("scrollToTop");
+  let hideTimeout;
+
+  const showButton = () => {
+    if (window.scrollY > 250) {
+      scrollBtn.classList.remove("hidden");
+      clearTimeout(hideTimeout);
+      hideTimeout = setTimeout(() => {
+        scrollBtn.classList.add("hidden");
+      }, 2000);
+    }
+  };
+
+  window.addEventListener("scroll", showButton);
+  window.addEventListener("touchstart", showButton);
+
+  scrollBtn.addEventListener("click", () => {
+    scrollBtn.style.transition = "transform 0.6s ease-in-out, opacity 0.6s ease-in-out";
+    scrollBtn.style.transform = "translateY(-50px)";
+    scrollBtn.style.opacity = "0";
+    setTimeout(() => {
+      scrollBtn.classList.add("hidden");
+      scrollBtn.style.transform = "";
+      scrollBtn.style.opacity = "";
+    }, 600);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  scrollBtn.classList.add("hidden");
+});
+</script><script>
+document.addEventListener("DOMContentLoaded", function () {
+  const blogContainer = document.querySelector("#blog .grid");
+  blogContainer.innerHTML = '<p class="text-gray-500 text-sm">Loading latest articles...</p>';
+
+  async function fetchDevTo() {
+    const res = await fetch("https://dev.to/api/articles?username=zubairmahmud");
+    const data = await res.json();
+    return data.slice(0, 2).map(post => ({
+      title: post.title,
+      description: post.description,
+      url: post.url
+    }));
+  }
+
+  async function fetchHashnode() {
+    const query = {
+      query: `query {
+        user(username: "ZubairMahmud") {
+          publication {
+            posts(page: 0) {
+              title
+              brief
+              slug
+            }
+          }
+        }
+      }`
+    };
+
+    const res = await fetch("https://gql.hashnode.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(query)
+    });
+
+    const json = await res.json();
+    return json.data.user.publication.posts.slice(0, 2).map(post => ({
+      title: post.title,
+      description: post.brief,
+      url: `https://hashnode.com/@ZubairMahmud/${post.slug}`
+    }));
+  }
+
+  async function loadBlogs() {
+    try {
+      const devPosts = await fetchDevTo();
+      const hashPosts = await fetchHashnode();
+      const posts = [...devPosts, ...hashPosts];
+
+      blogContainer.innerHTML = "";
+      posts.forEach(post => {
+        const div = document.createElement("div");
+        div.className = "bg-white p-5 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105";
+        div.innerHTML = \`
+          <a class="text-lg font-semibold text-primary hover:underline" href="\${post.url}" target="_blank">
+            \${post.title}
+          </a>
+          <p class="text-sm text-gray-600 mt-2">
+            \${post.description}
+          </p>\`;
+        blogContainer.appendChild(div);
+      });
+    } catch (err) {
+      blogContainer.innerHTML = '<p class="text-red-500 text-sm">Failed to load articles.</p>';
+    }
+  }
+
+  loadBlogs();
+});
+</script></body>
+</html>
